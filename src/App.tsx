@@ -1,7 +1,7 @@
-import "./App.css";
 import { useState } from "react";
 import { SingleTodo } from "./components/SingleTodo";
 import { TodoList } from "./components/TodoList";
+import "./styles/main.css";
 
 const todo: React.ReactElement[] = [];
 
@@ -9,11 +9,12 @@ function App() {
   const [task, setTask] = useState("");
 
   const handleClick: handleClick = (text: String) => {
-    todo.push(<SingleTodo todo={{ text: text, completed: true }} />);
+    todo.push(<SingleTodo todo={{ text: text, completed: false }} />);
   };
 
   return (
     <div className="App">
+      <h1>Make a best todo!</h1>
       <form>
         <input
           type="text"
@@ -32,9 +33,7 @@ function App() {
           Add
         </button>
       </form>
-      <div>
-        <TodoList todos={todo} />
-      </div>
+      <TodoList todos={todo} />
     </div>
   );
 }

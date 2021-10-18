@@ -1,6 +1,6 @@
 interface Todo {
   text: String;
-  completed: Boolean;
+  completed: boolean;
 }
 
 interface TodoList {
