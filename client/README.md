@@ -1,2 +1,0 @@
-# fullstack_react_typescript_todolist
-# react_typescript_todo
